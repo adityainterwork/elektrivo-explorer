@@ -195,6 +195,7 @@ class FabricClient {
 		);
 		const profileConnection = client_config.profile;
 		const configPath = path.resolve(__dirname, profileConnection);
+		console.log("config path========>",configPath);
 		const fabricConfig = new FabricConfig();
 		fabricConfig.initialize(configPath);
 		const config = fabricConfig.getConfig();

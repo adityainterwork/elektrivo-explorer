@@ -83,11 +83,11 @@ export class Login extends Component {
 			info: null,
 			user: {
 				error: null,
-				value: ''
+				value: 'admin'
 			},
 			password: {
 				error: null,
-				value: ''
+				value: 'adminpw'
 			},
 			network: {
 				error: null,

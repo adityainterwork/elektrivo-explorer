@@ -68,9 +68,7 @@
 		"**/*.{js,jsx,json,css}": [
 			"prettier --single-quote --write"
 		],
-		"**/*.{js,jsx,css}": [
-			
-		]
+		"**/*.{js,jsx,css}": []
 	},
 	"scripts": {
 		"docker_build": "docker build --squash -t $npm_package_name .",

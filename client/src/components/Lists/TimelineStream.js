@@ -12,7 +12,7 @@ import { Badge } from 'reactstrap';
 import Timeago from 'react-timeago';
 import find from 'lodash/find';
 import BlockView from '../View/BlockView';
-import blockOpen from '../../static/images/blockOpen.png';
+import blockOpen from '../../static/images/blockOpenWhite.png';
 import { blockListType, notificationsType } from '../types';
 
 /* istanbul ignore next */
@@ -27,7 +27,7 @@ const styles = theme => {
 		text: {
 			color: dark ? '#ffffff' : undefined,
 			'& .badge-secondary': {
-				backgroundColor: '#5e548f'
+				backgroundColor: '#d2001e'
 			}
 		},
 		event: {
@@ -83,13 +83,13 @@ export class TimelineStream extends Component {
 								key={item.title}
 								title={item.title}
 								icon={<FontAwesome name="cube" />}
-								iconColor="#0D3799"
+								iconColor="#0918a2"
 								container="card"
 								className={classes.event}
 								titleStyle={{ fontWeight: 'bold' }}
 								style={{ width: '65%' }}
 								cardHeaderStyle={{
-									backgroundColor: '#6283D0',
+									backgroundColor: '#0918a2',
 									fontSize: '13pt'
 								}}
 								contentStyle={{

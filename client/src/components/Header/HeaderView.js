@@ -19,7 +19,7 @@ import Dialog from '@material-ui/core/Dialog';
 import Loader from 'react-loader-spinner';
 import Select from '../Styled/Select';
 import NotificationsPanel from '../Panels/NotificationsPanel';
-import Logo from '../../static/images/Explorer_Logo.svg';
+import Logo from '../../static/images/logo.svg';
 import AdminPanel from '../Panels/AdminPanel';
 import { chartOperations, chartSelectors } from '../../state/redux/charts';
 import { tableOperations, tableSelectors } from '../../state/redux/tables';
@@ -82,21 +82,21 @@ const styles = theme => {
 	return {
 		logo: {
 			width: 260,
-			height: 50,
+			height: 40,
 			'@media (max-width: 1415px) and (min-width: 990px)': {
 				width: 200,
 				height: 40
 			}
 		},
 		navbarHeader: {
-			backgroundColor: '#e8e8e8',
+			backgroundColor: '#ffffff',
 			...darkNavbar
 		},
 		tab: {
 			color: dark ? '#242036' : '#000000',
 			fontSize: '1.05rem',
-			fontWeight: 800,
-			height: 50,
+			fontWeight: 600,
+			height: 40,
 			margin: 10,
 			'&:hover': {
 				color: dark ? '#242036' : '#000000'
@@ -107,10 +107,16 @@ const styles = theme => {
 		},
 		activeTab: {
 			color: '#ffffff',
-			backgroundColor: dark ? '#453e68' : '#58c5c2',
+			backgroundColor: dark ? '#453e68' : '#0918a2',
 			height: 60,
 			marginTop: 20,
 			padding: 10,
+			borderRadius: 4,
+			shadowColor: '#000',
+			shadowOffset: { width: 0, height: 2 },
+			shadowOpacity: 0.5,
+			shadowRadius: 2,
+			elevation: 8,
 			'&:hover': {
 				color: '#ffffff'
 			},
@@ -148,6 +154,8 @@ const styles = theme => {
 		channel: {
 			width: 200,
 			margin: 8,
+			background: '#fff',
+			color: '#fff',
 			float: 'none',
 			'@media (max-width: 1415px) and (min-width: 990px)': {
 				width: '9em'
@@ -202,7 +210,7 @@ const styles = theme => {
 			cursor: 'pointer'
 		},
 		toggleIcon: {
-			color: dark ? '#242136' : '#58c5c2',
+			color: dark ? '#242136' : '#0918a2',
 			fontSize: '1.75em',
 			'&:focus': {
 				outline: 'none'
@@ -511,7 +519,7 @@ export class HeaderView extends Component {
 							</NavbarToggler>
 							<Collapse isOpen={this.state.isOpen} navbar>
 								<Nav
-									className="ml-auto navbar-left"
+									className="ml-auto navbar-left p-2"
 									navbar
 									onMouseLeave={this.closeToggle}
 								>

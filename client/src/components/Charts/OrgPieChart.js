@@ -63,7 +63,7 @@ export class OrgPieChart extends Component {
 		this.state = {
 			data: [
 				{ value: 3, name: 'OrdererMSP', fill: '#0B091A' },
-				{ value: 40, name: 'Org1MSP', fill: '#6283D0' },
+				{ value: 40, name: 'Org1MSP', fill: '#2250a4' },
 				{ value: 23, name: 'Org2MSP', fill: '#0D3799' }
 			]
 		};

@@ -58,17 +58,44 @@ const styles = theme => {
 			margin: '0px !important'
 		},
 		filterButton: {
-			opacity: 0.8,
+			color: '#0918a2',
+			'border-radius': '0.12em',
+			'background-color': 'white',
+			'text-decoration': 'none',
+			border: '0.1em solid #0918a2',
+			'transition-duration': '0.4s',
+			margin: 'auto',
+			width: '100% !important',
+			'margin-bottom': '4px',
+			'&:hover': {
+				'background-color': '#0918a2',
+				color: 'white'
+			}
+		},
+		clearButton: {
+			color: '#848484',
+			'border-radius': '0.12em',
+			'background-color': 'white',
+			'text-decoration': 'none',
+			border: '0.1em solid #848484',
+			'transition-duration': '0.4s',
 			margin: 'auto',
 			width: '100% !important',
 			'margin-bottom': '4px'
 		},
 		searchButton: {
-			opacity: 0.8,
+			'border-radius': '0.12em',
+			'text-decoration': 'none',
+			border: '0.1em solid #0918a2',
+			opacity: 1,
 			margin: 'auto',
-			width: '100% !important',
-			backgroundColor: dark ? undefined : '#086108',
-			'margin-bottom': '4px'
+			width: '70% !important',
+			backgroundColor: dark ? undefined : '#0918a2',
+			'margin-bottom': '4px',
+			'&:hover': {
+				'background-color': '#0E187D',
+				color: 'white'
+			}
 		},
 		filterElement: {
 			textAlign: 'center',
@@ -360,7 +387,6 @@ export class Transactions extends Component {
 					<div className="col-md-2">
 						<Button
 							className={classes.searchButton}
-							color="success"
 							disabled={this.state.err}
 							onClick={async () => {
 								await this.handleSearch();
@@ -372,7 +398,6 @@ export class Transactions extends Component {
 					<div className="col-md-1">
 						<Button
 							className={classes.filterButton}
-							color="primary"
 							onClick={() => {
 								this.handleClearSearch();
 							}}
@@ -382,11 +407,10 @@ export class Transactions extends Component {
 					</div>
 					<div className="col-md-1">
 						<Button
-							className={classes.filterButton}
-							color="secondary"
+							className={classes.clearButton}
 							onClick={() => this.setState({ filtered: [], sorted: [] })}
 						>
-							Clear Filter
+							Clear
 						</Button>
 					</div>
 				</div>

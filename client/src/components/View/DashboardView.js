@@ -28,6 +28,7 @@ const styles = theme => {
 			backgroundColor: dark ? 'rgb(36, 32, 54)' : '#f0f5f9'
 		},
 		view: {
+			marginTop: '1%',
 			paddingTop: 85,
 			paddingLeft: 0,
 			width: '80%',

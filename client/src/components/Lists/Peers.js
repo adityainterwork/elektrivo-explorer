@@ -88,7 +88,7 @@ const Peers = ({ peerList }) => {
 				{
 					Header: 'Unsigned',
 					id: 'ledger_height_unsigned',
-					accessor: d => d.ledger_height_unsigned.toString(),
+					accessor: d => d.ledger_height_unsigned,
 					filterMethod: (filter, rows) =>
 						matchSorter(
 							rows,
@@ -107,10 +107,10 @@ const Peers = ({ peerList }) => {
 			<ReactTable
 				data={peerList}
 				columns={columnHeaders}
-				defaultPageSize={5}
+				defaultPageSize={10}
 				filterable
 				minRows={0}
-				showPagination={!(peerList.length < 5)}
+				showPagination={!(peerList.length < 10)}
 			/>
 		</div>
 	);
